@@ -1,0 +1,100 @@
+{ 
+    "arduino.path": "/home/jj/apps/arduino/arduino-1.8.12",
+    "files.associations": {
+        "*.ino": "arduino-output"
+    },
+    "window.zoomLevel": 2,
+    "editor.tabSize": 2,
+    "vim.handleKeys": {
+        "<C-k>": false
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.minimap.enabled": false,
+    // "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.theme": "specific",
+    "material-icon-theme.activeIconPack": "react",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.colorTheme": "Noctis Hibernus",
+    
+    "zenMode.hideLineNumbers": false,
+    "editor.lineNumbers": "on",
+    "workbench.colorCustomizations": {
+        "editorLineNumber.foreground": "#8909bb",
+        "editorLineNumber.": "#ff0000"
+    },
+    // power mode
+    // "powermode.enabled": true,
+    // firacode
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "Fira Code",
+    "vim.normalModeKeyBindingsNonRecursive": [{
+        "before": ["<C-w>", "+"],
+        "after": [],
+        "commands": [
+                {"command": "workbench.action.increaseViewSize", "args": []}
+            ]
+        },
+        {
+            "before": ["<C-w>", "="],
+            "after": [],
+            "commands": [
+                {"command": "workbench.action.increaseViewSize", "args": []}
+            ]
+        },
+        {
+            "before": ["<C-w>", "-"],
+            "after": [],
+            "commands": [
+                {"command": "workbench.action.decreaseViewSize", "args": []}
+            ]
+        },
+        {
+            "before": ["<C-w>", "\\"],
+            "after": [],
+            "commands": [
+                {"command": "workbench.action.increaseViewSize", "args": []},
+                {"command": "workbench.action.increaseViewSize", "args": []},
+                {"command": "workbench.action.increaseViewSize", "args": []},
+                {"command": "workbench.action.increaseViewSize", "args": []},
+                {"command": "workbench.action.increaseViewSize", "args": []},
+                {"command": "workbench.action.increaseViewSize", "args": []},
+                {"command": "workbench.action.increaseViewSize", "args": []},
+                {"command": "workbench.action.increaseViewSize", "args": []},
+                {"command": "workbench.action.increaseViewSize", "args": []},
+                {"command": "workbench.action.increaseViewSize", "args": []},
+                {"command": "workbench.action.increaseViewSize", "args": []},
+                {"command": "workbench.action.increaseViewSize", "args": []}
+            ]
+        },
+        {
+            "before": ["<C-w>", "|"],
+            "after": [],
+            "commands": [
+                {"command": "workbench.action.decreaseViewSize", "args": []},
+                {"command": "workbench.action.decreaseViewSize", "args": []},
+                {"command": "workbench.action.decreaseViewSize", "args": []},
+                {"command": "workbench.action.decreaseViewSize", "args": []},
+                {"command": "workbench.action.decreaseViewSize", "args": []},
+                {"command": "workbench.action.decreaseViewSize", "args": []},
+                {"command": "workbench.action.decreaseViewSize", "args": []},
+                {"command": "workbench.action.decreaseViewSize", "args": []},
+                {"command": "workbench.action.decreaseViewSize", "args": []},
+                {"command": "workbench.action.decreaseViewSize", "args": []},
+                {"command": "workbench.action.decreaseViewSize", "args": []},
+                {"command": "workbench.action.decreaseViewSize", "args": []}
+            ]
+        }
+    ],
+    "gitlens.views.repositories.branches.layout": "list",
+    "vim.easymotion": true,
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "vim.foldfix": true,
+    "prettier.semi": false,
+    "explorer.confirmDelete": false
+}
