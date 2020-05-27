@@ -59,6 +59,9 @@ autocmd FileType python setlocal tabstop=2 shiftwidth=2
 map <C-P><C-P> :w<Enter>:! python3 %<Enter>
 map <C-P><C-I> :w<Enter>:! python3 -i %<Enter>
 
+" disable safe write for parcel's HMR feature
+set backupcopy=yes
+
 "open file with vertical split + place it on right
 map <F8> :vertical wincmd f<CR>
 
