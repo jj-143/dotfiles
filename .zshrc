@@ -29,6 +29,7 @@ alias co9='xcalib -alter -co 99'
 
 
 # >>> dev works >>>
+alias gdf='git difftool'
 
 # (temporary)
 alias gcp='~/scripts/gcp'

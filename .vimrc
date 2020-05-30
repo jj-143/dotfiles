@@ -1,6 +1,9 @@
 set nocompatible
-
 syntax on
+
+" Pathogen
+filetype plugin indent on
+execute pathogen#infect()
 
 " Disable the default Vim startup message.
 set shortmess+=I
@@ -43,6 +46,11 @@ set smarttab
 
 set splitright
 
+" disable safe write for parcel's HMR feature
+set backupcopy=yes
+
+set autoread
+
 """
 " Powerline
 """
@@ -59,16 +67,18 @@ autocmd FileType python setlocal tabstop=2 shiftwidth=2
 map <C-P><C-P> :w<Enter>:! python3 %<Enter>
 map <C-P><C-I> :w<Enter>:! python3 -i %<Enter>
 
-" disable safe write for parcel's HMR feature
-set backupcopy=yes
-
 "open file with vertical split + place it on right
 map <F8> :vertical wincmd f<CR>
 
-"CTRL P
+set wildignore+=*/node_modules/*
+
+"""
+"  Plugins
+"""
+
+" CTRL P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-set wildignore+=*/node_modules/*
 
 " fast escape
 if ! has('gui_running')
