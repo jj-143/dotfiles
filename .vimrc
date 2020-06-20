@@ -50,6 +50,8 @@ set splitright
 set backupcopy=yes
 
 set autoread
+"autoread when changing buffers (inside vim)
+au FocusGained,BufEnter * :checktime
 
 """
 " Powerline
