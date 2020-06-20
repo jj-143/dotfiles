@@ -17,6 +17,9 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 eval "$(fasd --init auto)"
 
+# bindings
+# open Code in current directory
+bindkey -s "\C-e" "code .\C-m"
 
 # alias
 
@@ -26,7 +29,6 @@ alias gs='git status'
 alias caps='bash ~/work/work/capsToEsc.sh'
 alias vzsh='vim ~/.zshrc'
 alias co9='xcalib -alter -co 99'
-
 
 # >>> dev works >>>
 alias gdf='git difftool'
