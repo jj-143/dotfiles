@@ -3,7 +3,7 @@
     "files.associations": {
         "*.ino": "arduino-output"
     },
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 0,
     "editor.tabSize": 2,
     "vim.handleKeys": {
         "<C-k>": false
@@ -14,7 +14,7 @@
     "material-icon-theme.folders.theme": "specific",
     "material-icon-theme.activeIconPack": "react",
     "liveServer.settings.donotShowInfoMsg": true,
-    "workbench.colorTheme": "Noctis Hibernus",
+    "workbench.colorTheme": "Noctis Viola",
     
     "zenMode.hideLineNumbers": false,
     "editor.lineNumbers": "on",
@@ -94,7 +94,21 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true,
     },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
     "vim.foldfix": true,
     "prettier.semi": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+
+    // VSCode not respecting setxkbmap.
+    "keyboard.dispatch": "keyCode",
+    "explorer.confirmDragAndDrop": false,
+    "window.menuBarVisibility": "toggle",
+    "todo-tree.tree.showScanModeButton": false
 }
