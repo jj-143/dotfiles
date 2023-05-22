@@ -8,9 +8,9 @@ execute pathogen#infect()
 " Disable the default Vim startup message.
 set shortmess+=I
 
-colorscheme peachpuff
 highlight LineNr ctermfg=red
 highlight LineNrBelow ctermfg=blue
+
 
 set number
 set relativenumber
@@ -31,6 +31,7 @@ set hidden
 set ignorecase
 set smartcase
 set incsearch
+set hlsearch
 
 " Unbind some useless/annoying default key bindings.
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
@@ -60,11 +61,9 @@ au FocusGained,BufEnter * :checktime
 set laststatus=2
 set noshowmode
 
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
 
 autocmd FileType python setlocal tabstop=2 shiftwidth=2
+autocmd FileType *      setlocal shiftwidth=2
 
 map <C-P><C-P> :w<Enter>:! python3 %<Enter>
 map <C-P><C-I> :w<Enter>:! python3 -i %<Enter>
@@ -73,6 +72,12 @@ map <C-P><C-I> :w<Enter>:! python3 -i %<Enter>
 map <F8> :vertical wincmd f<CR>
 
 set wildignore+=*/node_modules/*
+
+" yy to clipboard
+" on Mac (iterm2)
+
+" on Linux
+set clipboard=unnamedplus
 
 """
 "  Plugins
@@ -104,3 +109,15 @@ endif
 "map <C-N><C-K> :s@\/\* @<Enter>:s@ \*\/@<Enter>
 
 "map <C-N><C-V> :read ~/local/template.vue<Enter>
+
+" vim-markdown
+set conceallevel=2
+set concealcursor=nc
+let g:vim_markdown_folding_disabled = 1
+hi Visual ctermfg=NONE ctermbg=0  guibg=Grey40 
+
+call plug#begin(expand("~/.vim/plugged"))
+Plug 'arcticicestudio/nord-vim'
+call plug#end()
+
+colorscheme nord

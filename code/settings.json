@@ -1,114 +1,205 @@
-{ 
-    "arduino.path": "/home/jj/apps/arduino/arduino-1.8.12",
-    "files.associations": {
-        "*.ino": "arduino-output"
-    },
-    "window.zoomLevel": 0,
-    "editor.tabSize": 2,
-    "vim.handleKeys": {
-        "<C-k>": false
-    },
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "editor.minimap.enabled": false,
-    // "workbench.iconTheme": "material-icon-theme",
-    "material-icon-theme.folders.theme": "specific",
-    "material-icon-theme.activeIconPack": "react",
-    "liveServer.settings.donotShowInfoMsg": true,
-    "workbench.colorTheme": "Noctis Viola",
-    
-    "zenMode.hideLineNumbers": false,
-    "editor.lineNumbers": "on",
-    "workbench.colorCustomizations": {
-        "editorLineNumber.foreground": "#8909bb",
-        "editorLineNumber.": "#ff0000"
-    },
-    // power mode
-    // "powermode.enabled": true,
-    // firacode
-    "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true,
-    "terminal.integrated.fontFamily": "Fira Code",
-    "vim.normalModeKeyBindingsNonRecursive": [{
-        "before": ["<C-w>", "+"],
-        "after": [],
-        "commands": [
-                {"command": "workbench.action.increaseViewSize", "args": []}
-            ]
-        },
-        {
-            "before": ["<C-w>", "="],
-            "after": [],
-            "commands": [
-                {"command": "workbench.action.increaseViewSize", "args": []}
-            ]
-        },
-        {
-            "before": ["<C-w>", "-"],
-            "after": [],
-            "commands": [
-                {"command": "workbench.action.decreaseViewSize", "args": []}
-            ]
-        },
-        {
-            "before": ["<C-w>", "\\"],
-            "after": [],
-            "commands": [
-                {"command": "workbench.action.increaseViewSize", "args": []},
-                {"command": "workbench.action.increaseViewSize", "args": []},
-                {"command": "workbench.action.increaseViewSize", "args": []},
-                {"command": "workbench.action.increaseViewSize", "args": []},
-                {"command": "workbench.action.increaseViewSize", "args": []},
-                {"command": "workbench.action.increaseViewSize", "args": []},
-                {"command": "workbench.action.increaseViewSize", "args": []},
-                {"command": "workbench.action.increaseViewSize", "args": []},
-                {"command": "workbench.action.increaseViewSize", "args": []},
-                {"command": "workbench.action.increaseViewSize", "args": []},
-                {"command": "workbench.action.increaseViewSize", "args": []},
-                {"command": "workbench.action.increaseViewSize", "args": []}
-            ]
-        },
-        {
-            "before": ["<C-w>", "|"],
-            "after": [],
-            "commands": [
-                {"command": "workbench.action.decreaseViewSize", "args": []},
-                {"command": "workbench.action.decreaseViewSize", "args": []},
-                {"command": "workbench.action.decreaseViewSize", "args": []},
-                {"command": "workbench.action.decreaseViewSize", "args": []},
-                {"command": "workbench.action.decreaseViewSize", "args": []},
-                {"command": "workbench.action.decreaseViewSize", "args": []},
-                {"command": "workbench.action.decreaseViewSize", "args": []},
-                {"command": "workbench.action.decreaseViewSize", "args": []},
-                {"command": "workbench.action.decreaseViewSize", "args": []},
-                {"command": "workbench.action.decreaseViewSize", "args": []},
-                {"command": "workbench.action.decreaseViewSize", "args": []},
-                {"command": "workbench.action.decreaseViewSize", "args": []}
-            ]
+{
+  "editor.tabSize": 2,
+  "vim.handleKeys": {
+    "<C-k>": false,
+    "cmd+w": true,
+    "<C-j>": true
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.minimap.enabled": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.lineNumbers": "relative",
+  "editor.fontFamily": "Fira Code iScript, Fira Code",
+  "terminal.integrated.fontFamily": "Space Mono",
+  "[markdown]": {
+    "editor.fontWeight": 500
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "storage.modifier",
+          "storage.type.class",
+          "storage.type.function",
+          "keyword.control.default",
+          "keyword.control.flow",
+          "storage.type.interface",
+          "storage.type.type"
+        ],
+        "settings": {
+          "fontStyle": "italic underline"
         }
-    ],
-    "gitlens.views.repositories.branches.layout": "list",
-    "vim.easymotion": true,
+      },
+      {
+        "scope": [
+          "meta.import",
+          "storage.type",
+          "support.type",
+          "keyword.control",
+          "keyword.operator.ternary",
+          "keyword.operator.expression",
+          "keyword.operator.new",
+          "constant.language",
+          "variable.language",
+          "entity.name.type",
+          "entity.other.attribute-name"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": ["constant.language.boolean"],
+        "settings": {
+          "fontStyle": "italic bold"
+        }
+      },
 
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
+      {
+        "scope": [
+          "storage.type.function.arrow",
+          "support.type.property-name" // json property
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "editor.fontLigatures": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-w>", "+"],
+      "after": [],
+      "commands": [
+        { "command": "workbench.action.increaseViewSize", "args": [] }
+      ]
     },
-    "[scss]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
+    {
+      "before": ["<C-w>", "="],
+      "after": [],
+      "commands": [
+        { "command": "workbench.action.evenEditorWidths", "args": [] }
+      ]
     },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
+    {
+      "before": ["<C-w>", "-"],
+      "after": [],
+      "commands": [
+        { "command": "workbench.action.decreaseViewSize", "args": [] }
+      ]
     },
-    "vim.foldfix": true,
-    "prettier.semi": false,
-    "explorer.confirmDelete": false,
+    {
+      "before": ["<C-w>", "z"],
+      "after": [],
+      "commands": [{ "command": "workbench.action.maximizeEditor", "args": [] }]
+    },
+    {
+      "before": ["<C-w>", "h"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.compareEditor.focusSecondarySide",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<C-w>", "l"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.compareEditor.focusPrimarySide",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<C-w>", "H"],
+      "after": [],
+      "commands": [
+        { "command": "workbench.action.moveEditorToLeftGroup", "args": [] }
+      ]
+    },
+    {
+      "before": ["<C-w>", "L"],
+      "after": [],
+      "commands": [
+        { "command": "workbench.action.moveEditorToRightGroup", "args": [] }
+      ]
+    },
+    {
+      "before": ["<C-G>", "l"],
+      "after": ["g", "f", "<C-W>", "l"]
+    },
+    {
+      "before": ["<C-G>", "h"],
+      "after": ["g", "f", "<C-W>", "h"]
+    },
+    {
+      "before": ["g", "D"],
+      "commands": [{ "command": "typescript.goToSourceDefinition" }]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<C-G>", "l"],
+      "after": ["g", "f", "<C-W>", "l"]
+    },
+    {
+      "before": ["<C-G>", "h"],
+      "after": ["g", "f", "<C-W>", "h"]
+    }
+  ],
+  "gitlens.views.repositories.branches.layout": "list",
+  "vim.easymotion": true,
+  "vim.foldfix": true,
+  "explorer.confirmDelete": false,
 
-    // VSCode not respecting setxkbmap.
-    "keyboard.dispatch": "keyCode",
-    "explorer.confirmDragAndDrop": false,
-    "window.menuBarVisibility": "toggle",
-    "todo-tree.tree.showScanModeButton": false
+  // linux: VSCode not respecting setxkbmap.
+  "keyboard.dispatch": "keyCode",
+  "explorer.confirmDragAndDrop": false,
+  "window.menuBarVisibility": "toggle",
+  "workbench.startupEditor": "newUntitledFile",
+  "extensions.ignoreRecommendations": false,
+  "update.showReleaseNotes": false,
+  "update.mode": "none",
+  "vim.hlsearch": true,
+  "vim.leader": " ",
+  "vim.camelCaseMotion.enable": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "gitlens.views.stashes.files.layout": "list",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "editor.fontSize": 14,
+  "editor.cursorBlinking": "phase",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.colorTheme": "Nord",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.hover.delay": 301,
+  "editor.renderLineHighlight": "all",
+  "editor.smoothScrolling": true,
+  "editor.suggest.preview": true,
+  "editor.guides.highlightActiveIndentation": "always",
+  "gitlens.graph.dimMergeCommits": true,
+  "gitlens.graph.avatars": false,
+  "reactSnippets.settings.importReactOnTop": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "gitlens.views.commitDetails.files.layout": "list",
+  "editor.cursorSurroundingLines": 4,
+  "editor.cursorSmoothCaretAnimation": true,
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "gitlens.advanced.blame.customArguments": [
+    "--ignore-revs-file",
+    ".git-blame-ignore-revs"
+  ],
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.saturation": 0.9,
+  "material-icon-theme.opacity": 0.9,
+  "window.zoomLevel": 1
 }

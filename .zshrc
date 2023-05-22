@@ -1,12 +1,16 @@
-export ZSH="/home/jj/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="smt"
 
-plugins=(git common-aliases zsh-autosuggestions history-substring-search zsh-syntax-highlighting)
+plugins=(git common-aliases zsh-autosuggestions history-substring-search zsh-syntax-highlighting fzf fzf-tab)
+
+export ZSH_HIGHLIGHT_MAXLENGTH=60
+export FZF_BASE=/usr/bin/fzf
 
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
+export BROWSER=
 export TERM=xterm-256color
 
 # Vim binding
@@ -21,62 +25,25 @@ eval "$(fasd --init auto)"
 # open Code in current directory
 bindkey -s "\C-e" "code .\C-m"
 
-# alias
 
-# ghostscript hinders it
+### alias ###
+# prevent ghostscript
 alias gs='git status'
+alias ys='yarn start'
 
-alias caps='bash ~/work/work/capsToEsc.sh'
-alias vzsh='vim ~/.zshrc'
-alias co9='xcalib -alter -co 99'
+alias gmc='git merge --continue'
+alias gcd='git clone --depth=1'
+
+# gloga, but ONLY local & show all stash
+alias glogl='git log --exclude="refs/remotes/*" --oneline --graph --decorate --boundary $(git reflog show --format="%h" stash)'
+
+alias gst="git stash push -u -m"
+
+# --no-ff "merge with.."
+alias gmw="git merge --no-ff"
 
 # >>> dev works >>>
 alias gdf='git difftool'
-
-# (temporary)
-alias gcp='~/scripts/gcp'
-
-# env & nb 
-alias fastai='source ~/scripts/fastai'
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/jj/Downloads/google-cloud-sdk/google-cloud-sdk/path.zsh.inc' ]; then . '/home/jj/Downloads/google-cloud-sdk/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/jj/Downloads/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/jj/Downloads/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc'; fi
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/jj/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/jj/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/jj/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/jj/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# <<< dev works <<<
-
-
-# >>> misc
-# TODO: shell hook
-function _check_todo {
-  if [ $# -lt 1 ]; then
-    echo no argument
-    return 1
-  fi
-  cd $@ && { [ -f "todo.txt" ] && echo yes || echo 'no' }
-}
-
-#alias cd='_check_todo'
-
-# <<< misc
-
 
 # ranger/examples/shell_automatic_cd.sh
 ranger_cd() {
@@ -88,5 +55,11 @@ ranger_cd() {
     rm -f -- "$temp_file"
 }
 
+alias tmux="env TERM=screen-256color tmux"
+
 # This binds Ctrl-O to ranger_cd:
 bindkey -s "\C-o" "ranger_cd\C-m"
+bindkey -s "\C-t" "tmux\C-m"
+
+bindkey -s "\C-g" "gloga\C-m"
+
